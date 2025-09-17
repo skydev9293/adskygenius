@@ -5,6 +5,7 @@ import "./globals.css"
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
+import { PageLoadingWrapper } from "@/components/page-loading-wrapper"
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -48,7 +49,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <PageLoadingWrapper>
+            {children}
+          </PageLoadingWrapper>
           <Toaster />
         </ThemeProvider>
       </body>

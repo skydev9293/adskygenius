@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   description:
     "Founded in 2024 with a bold vision to become a leading IT development agency in the United States. Exceptional talent delivers exceptional results.",
   generator: "v0.app",
+  icons: {
+    icon: "/company_logo.png",
+  },
 }
 
 export default function RootLayout({

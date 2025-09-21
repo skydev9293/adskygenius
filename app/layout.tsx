@@ -84,6 +84,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://adskygenius.com",
   },
+  verification: {
+    google: "google-site-verification-code", // Replace with actual Google Search Console verification code
+  },
+  other: {
+    'google-site-verification': 'google-site-verification-code', // Replace with actual verification code
+  },
 }
 
 export default function RootLayout({

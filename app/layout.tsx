@@ -43,10 +43,22 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: "/company_logo.png",
+    icon: [
+      { url: "/company_logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/company_logo.png", sizes: "16x16", type: "image/png" },
+    ],
     shortcut: "/company_logo.png",
-    apple: "/company_logo.png",
+    apple: [
+      { url: "/company_logo.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "apple-touch-icon-precomposed",
+        url: "/company_logo.png",
+      },
+    ],
   },
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -73,9 +85,11 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
@@ -102,6 +116,7 @@ export default function RootLayout({
       <head>
         <StructuredData type="organization" />
         <StructuredData type="website" />
+        <StructuredData type="localbusiness" />
       </head>
       <body className={`font-sans ${sourceSans.variable} ${playfairDisplay.variable} ${inter.variable}`}>
         <ThemeProvider

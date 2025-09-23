@@ -11,12 +11,28 @@ import { Footer } from "@/components/footer"
 export const metadata: Metadata = {
   title: "AdSky Genius - Leading IT Development Agency",
   description: "Transform your business with AdSky Genius - the leading IT development agency founded in 2024. We deliver exceptional web development, mobile apps, cloud solutions, and custom software with unmatched expertise.",
-  keywords: ["IT development agency", "web development", "mobile app development", "cloud solutions", "custom software", "digital transformation", "software consulting", "technology services"],
+  keywords: ["IT development agency", "web development", "mobile app development", "cloud solutions", "custom software", "digital transformation", "software consulting", "technology services", "AdSky Genius"],
+  authors: [{ name: "AdSky Genius" }],
+  creator: "AdSky Genius",
+  publisher: "AdSky Genius",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "AdSky Genius - Leading IT Development Agency",
     description: "Transform your business with AdSky Genius - the leading IT development agency. We deliver exceptional web development, mobile apps, cloud solutions, and custom software.",
     type: "website",
     url: "https://adskygenius.com",
+    siteName: "AdSky Genius",
+    locale: "en_US",
     images: [
       {
         url: "https://adskygenius.com/company_logo.png",
@@ -31,6 +47,7 @@ export const metadata: Metadata = {
     description: "Transform your business with AdSky Genius - the leading IT development agency. We deliver exceptional web development, mobile apps, cloud solutions.",
     images: ["https://adskygenius.com/company_logo.png"],
     card: "summary_large_image",
+    creator: "@adskygenius",
   },
   alternates: {
     canonical: "https://adskygenius.com",
